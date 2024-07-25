@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { API_KEY } from "../utils/common";
+import { POST_API } from "../utils/constant";
+import { Link } from "react-router-dom";
 
 const Carousal = () => {
   const [trendData, setTrendData] = useState([]);
@@ -16,8 +17,7 @@ const Carousal = () => {
 
   const fetchTrendData = async () => {
     const data = await fetch(
-      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=" +
-        API_KEY
+      "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=" + POST_API
     );
     const json = await data.json();
     setTrendData(json.articles);
@@ -25,7 +25,7 @@ const Carousal = () => {
 
   return (
     <Swiper
-      className="mx-10 mt-4 rounded-2xl h-96 w-8/12 text-center"
+      className="mt-4 rounded-2xl h-96 w-11/12 text-center"
       modules={[Navigation, Scrollbar, Autoplay]}
       spaceBetween={0}
       slidesPerView={1}
@@ -40,12 +40,15 @@ const Carousal = () => {
       }}
     >
       {trendData.map((slide) => (
-        <SwiperSlide className="relative ">
-          <img src={slide.urlToImage} className="h-full w-full object-cover" />
-          <div>
-            <h1 className=" absolute text-xl font-extrabold shadow-2xl text-white bottom-10 left-4">
-              {slide.title}
-            </h1>
+        <SwiperSlide key={slide.url} className="relative ">
+          <Link to={`/article/${"carousal"}/${encodeURIComponent(slide.url)}`}>
+            <img
+              src={slide.urlToImage}
+              className="h-full w-full object-cover"
+            />
+          </Link>
+          <div className=" absolute py-2 px-3  text-xl font-extrabold shadow-2xl text-white bottom-10 left-4">
+            <h1>{slide.title}</h1>
           </div>
         </SwiperSlide>
       ))}

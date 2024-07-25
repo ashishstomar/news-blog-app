@@ -20,6 +20,8 @@ const BlogPostDetails = () => {
         baseUrl = "https://newsapi.org/v2/everything?q=sports";
       } else if (category === "trending") {
         baseUrl = "https://newsapi.org/v2/everything?q=trending";
+      } else if (category === "carousal") {
+        baseUrl = "https://newsapi.org/v2/top-headlines?sources=cnn";
       } else {
         baseUrl = "https://newsapi.org/v2/everything?q=popularity";
       }
