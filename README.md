@@ -2,7 +2,20 @@
 
 Welcome to the **NewsBlog** project! This is a responsive news article website built with React and Tailwind CSS. The application provides a modern, user-friendly interface to display news articles from various categories and allows users to view full articles on dedicated pages.
 
-![alt text](localhost_5174_.png) ![alt text](<localhost_5174_ 1.png>) ![alt text](<localhost_5174_(Pixel 7) (1).png>)
+#### Flutter App Screenshots
+
+<table>
+  <tr>
+    <td>First Screen Page - PC</td>
+     <td>Full Article - Tablet</td>
+     <td>Firt Screen Page - Mobile</td>
+  </tr>
+  <tr>
+    <td><img src="src\assets\localhost_5174_.png" width=570 height=480></td>
+    <td><img src="src\assets\localhost_5174_ 1.png" width=370 height=480></td>
+    <td><img src="src\assets\localhost_5174_(Pixel 7) (1).png" width=270 height=480></td>
+  </tr>
+ </table>
 
 ## Table of Contents
 
