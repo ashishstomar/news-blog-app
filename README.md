@@ -46,7 +46,7 @@ To get started with the NewsArticle project, follow these steps:
 2. Navigate into the project directory:
 
    ```bash
-   cd news-blog
+   cd news-blog-app
    ```
 
 3. Install dependencies:
@@ -58,7 +58,7 @@ To get started with the NewsArticle project, follow these steps:
 4. Add your API key:
 
    ```
-   POST_API = yourapikey
+   POST_API = "YourAPIKey"
    ```
 
 5. Start the development server:
