@@ -1,1 +1,1 @@
-export const POST_API = "3e9717ace3f74d568df609ad64665287"; //Demo API for testing, get yours at newsapi.org
+export const POST_API = "38ef4feff37646e0a7e4b45ae2443d59"; //Demo API for testing, get yours at newsapi.org
