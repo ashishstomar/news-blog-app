@@ -1,5 +1,6 @@
 {
   "name": "vite-project",
+  "homepage": "https://ashishstomar.github.io/news-blog-app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
