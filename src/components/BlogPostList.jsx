@@ -35,7 +35,7 @@ const BlogPostList = ({ category }) => {
         <Shimmer />
       ) : (
         <div>
-          <div className="mx-12 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center">
+          <div className="mx-12 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 gap-x-36 justify-items-center">
             {newsData.map((card) => (
               <BlogPostItem key={card.url} data={card} category={category} />
             ))}
