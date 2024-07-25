@@ -11,9 +11,9 @@ Welcome to the **NewsBlog** project! This is a responsive news article website b
      <td>Firt Screen Page - Mobile</td>
   </tr>
   <tr>
-    <td><img src="src\assets\localhost_5174_.png" width=570 height=480></td>
-    <td><img src="src\assets\localhost_5174_ 1.png" width=370 height=480></td>
-    <td><img src="src\assets\localhost_5174_(Pixel 7) (1).png" width=270 height=480></td>
+    <td><img src="src\assets\localhost_5174_.png" width=470 height=auto></td>
+    <td><img src="src\assets\localhost_5174_ 1.png" width=470 height=auto></td>
+    <td><img src="src\assets\localhost_5174_(Pixel 7) (1).png" width=270 height=auto></td>
   </tr>
  </table>
 
