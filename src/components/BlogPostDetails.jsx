@@ -42,10 +42,16 @@ const BlogPostDetails = () => {
     return <Shimmer />;
   }
 
+  let paths = "/" + category;
+  if (category === "carousal" || category === "popularity") {
+    paths = "/";
+  }
+  console.log("path " + paths);
+
   return (
     <div className="text-white min-h-screen p-4 md:p-6 lg:p-8">
       <div className="container mx-auto">
-        <Link to="/">
+        <Link to={`${paths}`}>
           <button className=" text-slate-100 font-bold bg-slate-500 px-6 py-2 rounded-full hover:bg-slate-600 mb-6 flex items-center gap-2">
             <FaArrowLeft /> Back
           </button>
