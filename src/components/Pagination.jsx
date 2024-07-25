@@ -1,11 +1,21 @@
 import { HiArrowCircleLeft, HiArrowCircleRight } from "react-icons/hi";
 
-const Pagination = ({ pageNum, setPageNum }) => {
+const Pagination = ({ pageNum, setPageNum, isLastPage }) => {
+  const handlePrevClick = () => {
+    setPageNum((prev) => (prev > 1 ? prev - 1 : prev));
+  };
+
+  const handleNextClick = () => {
+    setPageNum((prev) => (isLastPage ? 1 : prev + 1));
+  };
   return (
     <div className="text-xl text-white flex justify-center gap-10 items-center mt-8">
       <button
-        onClick={() => setPageNum(pageNum - 1)}
-        className="border-gray-500 hover:bg-gray-800 flex items-center gap-2 px-6 py-2 border rounded-full"
+        onClick={handlePrevClick}
+        className={`border-gray-500 hover:bg-gray-800 flex items-center gap-2 px-6 py-2 border rounded-full ${
+          pageNum === 1 ? "opacity-50 cursor-not-allowed" : ""
+        }`}
+        disabled={pageNum === 1}
       >
         <HiArrowCircleLeft />
         <p className="mb-1">Prev</p>
@@ -14,7 +24,7 @@ const Pagination = ({ pageNum, setPageNum }) => {
         {pageNum}
       </p>
       <button
-        onClick={() => setPageNum(pageNum + 1)}
+        onClick={handleNextClick}
         className="border-gray-500 hover:bg-gray-800 flex items-center gap-2 py-2 px-6 border rounded-full"
       >
         <p className="mb-1">Next</p>
