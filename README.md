@@ -6,9 +6,9 @@ Welcome to the **NewsBlog** project! This is a responsive news article website b
 
 <table>
   <tr>
-    <td>First Screen Page - PC</td>
+    <td>Home Page - PC</td>
      <td>Full Article - Tablet</td>
-     <td>Firt Screen Page - Mobile</td>
+     <td>Home Page - Mobile</td>
   </tr>
   <tr>
     <td><img src="src\assets\localhost_5174_.png" width=470 height=auto></td>
